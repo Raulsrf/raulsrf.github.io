@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+  background-color: #ca92ff;
+}
+
+.descricao {
+  font-family: 'Carter one', cursive;
+  font-size: 50px;
+  color: #e4ffa7;
+  margin-bottom: 0%;
+}
+
+.subtitulo {
+  font-family: Calibri;
+  font-size: 25px;
+  color: #fafbf7;
+  margin-top: 0%;
+}
+
+.texto {
+  font-family: 'Pacifico', cursive;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  font-family: 'Carter one', cursive;
+}
+
+nav {
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  transition: ease-in-out 0.3s;
+  
+}
+
+a:hover {
+color: rgb(208, 255, 0);
+}
+
+img {
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.barra {
+  width: 100%;
+  background: rgba(196, 196, 196, 0.11);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.452);
+}
+
+.barra-conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.centralizador {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#inicio {
+  background: #ca92ff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.altura-ajuste{
+  width: 100%;
+}
+
+.ajustador {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.apresentacao {
+  max-width: 741px;
+  color:white;
+}
+
+.descricao {
+  grid-area: descricao;
+}
+
+.desenho {
+  width: 500px;
+  grid-area: desenho;
+}
+
+.close-menu {
+  display: none;
+}
+
+@media (max-width:1200px) {
+  
+  #inicio{
+      background: #352728;
+      height: auto;
+  }
+
+  .ajustador {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 50px;
+  }
+
+  .desenho {
+      padding: 100px 0;
+  }
+
+  .apresentacao {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+  }
+
+  .esquerda {
+      margin-left: 15px;
+  }
+
+  .direita {
+      margin-right: 15px;
+  }
+
+}
+
+@media (max-width:950px) {
+  .desenho {
+      padding: 25px 0;
+  }
+
+  .altura-ajuste{
+      display: flex;
+      justify-content: center;
+  }
+  .organizador {
+      max-width: 300px;
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-areas:  
+      "desenho"
+      "descricao";
+      line-height: 35px;
+  }
+
+  #inicio {
+      display: flex;
+      justify-content: center;
+  }
+
+  .desenho {
+      display: flex;
+      justify-content: center;
+  }
+
+  .gif1 {
+    display: flex;
+  }
+
+  .descricao {
+    color: #e4ffa7;
+      font-size: 20px;
+  }
+
+  .esquerda, .direita {
+      margin: 0;
+  }
+  .barra{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .centralizador{
+      margin: 0;
+  }
+  .barra-conteiner {
+      width: 300px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+  }
+  .barra-conteiner .logo{
+      width: 100%
+  }
+
+  .direita ul {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .direita ul a {
+      font-size: 35px;
+  }
+
+  /* configurando menu mobile */
+  .barra {
+      display: block;
+      position: fixed;
+      top: -100vh;
+      transition: ease 0.3s;
+  }
+  
+  .close-menu-label::after {
+      content:'≡';
+      position: fixed;
+      z-index: 2;
+      top: 2rem;
+      right: 2rem;
+      background: #792e33;
+      color: white;
+      font-size: 3rem;
+      line-height:3rem;
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  /* ✕ */
+  .close-menu:checked~.barra {
+      top: 0;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+      display: block;
+      content: '✕';
+  }
+
+  .barra .barra-conteiner ul li a{
+      font-size: 25px;
+  }
+
+  .barra {
+      background: rgba(0, 0, 0, 0.527);
+  }
+
+}
+
+#sobre-mim {
+  width: 100%;
+  background-color: #d7c0ec;
+}
+
+
+.ajustador-2 {
+  padding: 144px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 67px;
+  max-width: 1064px;
+  margin: 0 auto;
+}
+
+@keyframes html {
+  0% {
+      bottom: 0;
+      left: 250px;
+  }
+  100% {
+      bottom: 0;
+      left: 50px;
+  }
+}
+
+@keyframes css {
+  0% {
+      bottom: 0;
+      left: 50px;
+  }
+  100% {
+      bottom: 0;
+      left: 250px;
+  }
+}
+
+.html {
+  bottom: 0;
+  left: 0;
+  animation: html 3s infinite linear alternate-reverse ;
+}
+
+.js {
+  bottom: 0;
+  left: 150px;
+}
+
+.css {
+  bottom: 0;
+  left: 300px;
+  animation: css 3s infinite linear alternate-reverse;
+}
+
+.sobre-mim{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sobre-mim p {
+  text-indent: 30px;
+  font-size: 20px;
+  max-width: 609.25px;
+  color: white;
+}
+
+@media (max-width:1200px) {
+  .ajustador-2 {
+      justify-content: center;
+      text-align: center;
+  }
+
+  .ajustador-2 p {
+      font-size: 15px;
+  }
+  .sobre-mim p {
+      text-indent: 0;
+  }
+}
+
+@media(max-width:950px){
+
+  .ajustador-2 {
+      max-width: 350px;
+      padding: 70px 30px;
+  }
+
+}
+
+#terapia-colaborativa {
+  width: 100%;
+  background-color: #ca92ff;
+}
+
+.ajustador-2 {
+  padding: 144px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 67px;
+  max-width: 1064px;
+  margin: 0 auto;
+}
+
+@keyframes html {
+  0% {
+      bottom: 0;
+      left: 250px;
+  }
+  100% {
+      bottom: 0;
+      left: 50px;
+  }
+}
+
+@keyframes css {
+  0% {
+      bottom: 0;
+      left: 50px;
+  }
+  100% {
+      bottom: 0;
+      left: 250px;
+  }
+}
+
+.html {
+  bottom: 0;
+  left: 0;
+  animation: html 3s infinite linear alternate-reverse ;
+}
+
+.js {
+  bottom: 0;
+  left: 150px;
+}
+
+.css {
+  bottom: 0;
+  left: 300px;
+  animation: css 3s infinite linear alternate-reverse;
+}
+
+.terapia-colaborativa{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.terapia-colaborativa p {
+  text-indent: 30px;
+  font-size: 20px;
+  max-width: 609.25px;
+  color: white;
+}
+
+@media (max-width:1200px) {
+  .ajustador-2 {
+      justify-content: center;
+      text-align: center;
+  }
+
+  .ajustador-2 p {
+      font-size: 15px;
+  }
+  .terapia-colaborativa p {
+      text-indent: 0;
+  }
+}
+
+@media(max-width:950px){
+
+  .ajustador-2 {
+      max-width: 350px;
+      padding: 70px 30px;
+  }
+
+}
+
+#depoimentos {
+  width: 100%;
+  background-color: #ca92ff;
+}
+
+.centralizador {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ajustador-organizador2 {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1064px;
+  margin: 0 auto;
+}
+
+.grid-depoimentos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.depo {
+  max-width: 430px;
+}
+
+@keyframes html {
+  0% {
+      bottom: 0;
+      left: 250px;
+  }
+  100% {
+      bottom: 0;
+      left: 50px;
+  }
+}
+
+@keyframes css {
+  0% {
+      bottom: 0;
+      left: 50px;
+  }
+  100% {
+      bottom: 0;
+      left: 250px;
+  }
+}
+
+.html {
+  bottom: 0;
+  left: 0;
+  animation: html 3s infinite linear alternate-reverse ;
+}
+
+.js {
+  bottom: 0;
+  left: 150px;
+}
+
+.css {
+  bottom: 0;
+  left: 300px;
+  animation: css 3s infinite linear alternate-reverse;
+}
+
+.depoimentos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.depoimentos p {
+  text-indent: 30px;
+  font-size: 20px;
+  max-width: 609.25px;
+  color: white;
+}
+
+@media (max-width:1200px) {
+  .ajustador-2 {
+      justify-content: center;
+      text-align: center;
+  }
+
+  .ajustador-2 p {
+      font-size: 15px;
+  }
+  .depoimentos p {
+      text-indent: 0;
+  }
+}
+
+@media(max-width:950px){
+
+  .ajustador-2 {
+      max-width: 350px;
+      padding: 70px 30px;
+  }
+
+}
